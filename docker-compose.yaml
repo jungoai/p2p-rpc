@@ -3,15 +3,14 @@ services:
     image: ghcr.io/mohsennz/p2prpc:latest
     container_name: 'p2prpc'
     ports:
-      - "4001:4001" # map P2PRPC_HTTP_PORT
-      - "3101:3101" # map P2PRPC_P2P_PORT
+      - "4001:4001" # P2PRPC_HTTP_PORT
+      - "3101:3101" # P2PRPC_P2P_PORT
     environment:
       P2PRPC_NAME           : "n1"
       P2PRPC_HTTP_PORT      : 4001
       P2PRPC_P2P_PORT       : 3101
-      P2PRPC_HTTP_ENDPOINT  : "http://1.2.3.4:8001" # NOTE: It's mandatory e.g: 192.65.7.2:8000
-                                                    # NOTE: you should configure a reverse proxy
-                                                    # to map <httpEndpoint>/<chain-id> to
+      P2PRPC_HTTP_ENDPOINT  : "http://1.2.3.4:8001" # NOTE: you should configure a reverse proxy
+                                                    # to map @P2PRPC_HTTP_ENDPOINT/<chain-id> to
                                                     # the running chain address
       P2PRPC_IS_BOOTSTRAP   : "true"
       P2PRPC_BOOTSTRAPPERS  : "" # separate items with comma

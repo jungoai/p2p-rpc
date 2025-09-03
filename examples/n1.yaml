@@ -1,10 +1,9 @@
 name:           "n1"
-httpEndpoint:   "http://127.0.0.1:5001" # NOTE: It's mandatory e.g: 192.65.7.2:8000
-                                        # NOTE: you should configure a reverse proxy
-                                        # to map <httpEndpoint>/<chain-id> to
+httpEndpoint:   "http://127.0.0.1:5001" # NOTE: you should configure a reverse proxy
+                                        # to map @httpEndpoint/<chain-id> to
                                         # the running chain address
-httpPort:       4001  # it should map to httpEndpoint/ by a reverse proxy
-p2pPort:        3101  # for p2p node connections
-isBootstrap:    true  # (default: false)
-localTest:      true  # (default: false)
+httpPort:       4001
+p2pPort:        3101
+isBootstrap:    true # (default: false)
+localTest:      true # (default: false)
 bootstrappers:  []
