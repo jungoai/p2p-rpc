@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    // "rewriteRelativeImportExtensions": true,
+    // "verbatimModuleSyntax": true,
+
+    // TODO: consideration
+    // "noImplicitAny": true,
+    // "noImplicitThis": true,
+    // "noImplicitReturns": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noUncheckedIndexedAccess": true,
+    // "noImplicitOverride": true,
+    // "allowUnusedLabels": false,
+    // "allowUnreachableCode": false,
+    // "allowJs": false,
+    // "checkJs": false
+  },
+  "include": ["src"],
+}

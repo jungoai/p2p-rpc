@@ -1,0 +1,7 @@
+name:           "n3"
+httpEndpoint:   "http://127.0.0.1:5003"
+httpPort:       4003
+p2pPort:        3103
+localTest:      true
+bootstrappers:
+  - "/ip4/127.0.0.1/tcp/3102/p2p/12D3KooWNukt4XDPo5A2PCm2Xud4v4MndQtrdFSvtz55HC5QNpxZ"
