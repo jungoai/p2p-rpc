@@ -1,12 +1,12 @@
 # P2P RPC
 
-p2prpc is a peer-to-peer RPC (Remote Procedure Call) network layer designed for blockchain infrastructure.
+P2prpc is a peer-to-peer network layer designed for blockchain RPC infrastructure.
 
 It links blockchain RPC nodes together using libp2p and provides a client SDK for seamless and fault-tolerant interaction with the network.
 
 Instead of relying on a single RPC endpoint, clients maintain an updated list of node addresses and use them for load balancing, redundancy, and failover—ensuring more reliable blockchain requests and transactions.
 
-✨ **Features**
+## ✨ Features
 
 - **Peer-to-Peer RPC Node Network**
   Nodes discover and connect to each other through libp2p, forming a decentralized mesh of RPC providers.
@@ -16,9 +16,9 @@ Instead of relying on a single RPC endpoint, clients maintain an updated list of
 
 - **Client SDK**
   Applications connect through the SDK, which automatically:
-  - Keeps track of available RPC nodes.
-  - Chooses healthy nodes for requests.
-  - Falls back to other nodes if one becomes unavailable.
+    - Keeps track of available RPC nodes.
+    - Chooses healthy nodes for requests.
+    - Falls back to other nodes if one becomes unavailable.
 
 - **Fault-Tolerant RPC Access**
   Clients use the distributed node list to avoid single points of failure.
@@ -26,33 +26,24 @@ Instead of relying on a single RPC endpoint, clients maintain an updated list of
 - **Blockchain Agnostic**
   Designed to work with any blockchain that exposes an RPC interface.
 
-🚀 **How It Works**
+## 🚀 How It Works
 
 1. Nodes join the p2prpc network via libp2p.
 2. Peers exchange their addresses and propagate them throughout the network.
 3. Clients connect to the SDK, which fetches and maintains the latest peer addresses.
 4. When a blockchain request or transaction is made:
-  - The SDK routes it to an available node.
-  - If one node fails, it retries with another.
+    - The SDK routes it to an available node.
+    - If one node fails, it retries with another.
 
-📦 **Use Cases**
+## 📦 Use Cases
 
 - Running redundant blockchain infrastructure without load balancers.
 - Building resilient dApps that don’t break when a single RPC provider fails.
 
-🛠️ Roadmap
+## 🛠️ Roadmap
 
 - [x] Support for multiple blockchains out-of-the-box
-- [ ] SDKs in multiple languages
-  - [x] JS/TS
-  - [ ] Python
-  - [ ] Rust
-- [ ] Advanced node selection strategies (latency, region, capacity)
 - [ ] Node reputation and health monitoring.
-
-## Example
-
-To see the use case example visit ...(todo)
 
 ## Development
 
