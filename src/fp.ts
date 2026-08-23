@@ -50,7 +50,7 @@ type Fn1 = (x: any) => any
 type Fn2<T, Y> = (x: T) => Y
 
 // pip(x, [h, g, f])
-export function pip(x1: any, fs: Fn1[]): any {
+export function pipe(x1: any, fs: Fn1[]): any {
   let y = x1
   for (const f of fs) {
     y = f(y)
@@ -61,7 +61,7 @@ export function pip(x1: any, fs: Fn1[]): any {
 // comp([f, g, h])(x)
 export function comp(fs: Fn1[]): Fn1 {
   fs.reverse()
-  return (x) => pip(x, fs)
+  return (x) => pipe(x, fs)
 }
 
 // prettier-ignore
